@@ -4,9 +4,9 @@ sshd service enabled centos' docker image
 <h1> What's Unique About This Image </h1>
 Well , the uniqueness of this image is that it supports-only the key-based authentication which is very much good in context of security . Also, the way it takes the public key to store it in authorized_keys file (present inside /root/.ssh/ directory ) makes very much easy to make the use of it  in the automation world tools like Ansible.
 
-<h1> How To Use It </h2>
+<h1> How To Use It </h1>
 Well , it is pretty much easy and the same the way to deploy any container.Typically , we use <i>docker [sum options according to our custom need] [container name] image</i>.
-We will make the use of same command but with one more extra option i.e -e (yup , you got right the --env option).. So ,it looks something like this<br>
+We will make the use of same command but with one more extra option i.e -e (yup , you got right the --env option).. So ,it looks something like this</br>
 ```
 docker run -dit --name [name of conatiner you want to give]  -e  public_key=[your public key]   [name of image]
 ```
