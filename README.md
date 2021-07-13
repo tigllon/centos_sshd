@@ -9,6 +9,8 @@ Well , it is pretty much easy and the same the way to deploy any container.Typic
 We will make the use of same command but with one more extra option i.e -e (yup , you got right the --env option).. So ,it looks something like this
 
 <h4><b><i> docker run -dit --name [name of conatiner you want to give]  -e  public_key=[your public key]   [name of image] </i> </b></h4>
+So,one of the way of providing the public key to public_key env option is<br>
+<i> <b> docker run -dit --name [name of conatainer] -e public_key="`cat (path to public key file)`" [image name]</b></i><br>
 
 Notice , the public_key option over there this is the only extra thing we have to do . The starting_script.sh will take public_key of the client from the <b>$public_key</b> shell environment variable and update it in /root/.ssh/authorized_keys file , and then we will be able to do ssh into it...
 
