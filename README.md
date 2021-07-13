@@ -7,7 +7,7 @@ Well , the uniqueness of this image is that it supports-only the key-based authe
 <h1> How To Use It </h2>
 Well , it is pretty much easy and the same the way to deploy any container.Typically , we use <i>docker [sum options according to our custom need] [container name] image</i>.
 We will make the use of same command but with one more extra option i.e -e (yup , you got right the --env option).. So ,it looks something like this
-```docker run -dit --name [name of conatiner you want to give]  -e  public_key=[your public key]   [name of image] ```
+`docker run -dit --name [name of conatiner you want to give]  -e  public_key=[your public key]   [name of image] `
 So,one of the way of providing the public key to public_key env option is
 ```
 docker run -dit --name [name of conatainer] -e public_key="`cat (path to public key file)`" [image name]
