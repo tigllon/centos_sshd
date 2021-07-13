@@ -1,5 +1,5 @@
 # centos_sshd
-sshd service enabled centos' docker image
+*SShd service enabled centos' docker image*
 ## What's Unique About This Image 
 Well , the uniqueness of this image is that it supports-only the key-based authentication which is very much good in context of security . Also, the way it takes the public key to store it in authorized_keys file (present inside /root/.ssh/ directory ) makes very much easy to make the use of it in the automation world tools like Ansible. 
 
