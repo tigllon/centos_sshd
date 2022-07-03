@@ -1,10 +1,11 @@
 # centos_sshd
-*SShd service enabled centos' docker image*
+*SShd service enabled centos' docker image*<br/>
+Docker Hub Repo -: https://hub.docker.com/repository/docker/tigllon/centos_sshd
 ## What's Unique About This Image 
 Well , the uniqueness of this image is that it supports-only the key-based authentication which is very much good in context of security . Also, the way it takes the public key to store it in authorized_keys file (present inside /root/.ssh/ directory ) makes very much easy to make the use of it in the automation world tools like Ansible. 
 
 ##  How To Use It 
-Well , it is pretty much easy and the same the way to deploy any container.Typically , we use docker [sum options according to our custom need] [container name] image. We will make the use of same command but with one more extra option i.e -e (yup , you got right the --env option).. So ,it looks something like this
+Well , it is pretty much easy and the same the way to deploy any container.Typically , we use docker [some options according to our custom need] [container name] image. We will make the use of same command but with one more extra option i.e -e (yup , you got right the --env option).. So ,it looks something like this
 ```
 docker run -dit --name [name of conatiner you want to give] -e public_key=[your public key] [name of image] 
 ```
